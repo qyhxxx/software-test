@@ -1,6 +1,5 @@
 package qyhxxx;
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -9,13 +8,15 @@ import org.junit.runners.Parameterized;
 import java.util.Arrays;
 import java.util.Collection;
 
+import static org.junit.Assert.*;
+
 @RunWith(Parameterized.class)
-public class TestLab1 {
+public class Lab1Test {
     private int input;
     private boolean expected;
     private Lab1 lab1 = null;
 
-    public TestLab1(int input, boolean expected) {
+    public Lab1Test(int input, boolean expected) {
         this.input = input;
         this.expected = expected;
     }
@@ -39,6 +40,6 @@ public class TestLab1 {
 
     @Test
     public void testSolve() {
-        Assert.assertEquals(this.expected, lab1.solve(this.input));
+        assertEquals(this.expected, lab1.solve(this.input));
     }
 }
